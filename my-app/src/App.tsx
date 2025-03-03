@@ -1,15 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from "./components/Nav";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
+import ConfirmedBooking from "./components/ConfirmedBooking";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-          <h1>paps</h1>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Header/>
+            <Nav/>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Main />} />
+                    <Route path="/confirmation" element={<ConfirmedBooking />} />
+                </Routes>
+            <Footer/>
+            </Router>
+        </>
+    );
 }
 
 export default App;

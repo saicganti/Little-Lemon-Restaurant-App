@@ -18,9 +18,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
   },
   "include": [
-    "src"
+    "src",
+    "../../../AppData/Roaming/JetBrains/WebStorm2024.2/javascript/extLibs/http_raw.githubusercontent.com_courseraap_capstone_main_api.js"
   ]
 }
