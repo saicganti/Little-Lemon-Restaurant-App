@@ -9,8 +9,17 @@ const Footer = () => {
             <h3 id={"footer1-head"}>Document Navigation</h3>
             <h3 id={"footer2-head"}>Contact</h3>
             <br></br>
-                <p id={"footer1-bullet"}>Home <br></br> Menu <br></br>About <br></br>Reserve</p>
-                <p id={"footer2-bullet"}>Address<br></br>Phone<br></br>Email</p>
+                <p id={"footer1-bullet"}>
+                    <a href={"#header"}>Home</a> <br></br>
+                    <a href={"#specials"}>Menu</a> <br></br>
+                    <a href={"#about"}>About</a> <br></br>
+                    <a href={"#booking-section"}>Reserve</a>
+                </p>
+                <p id={"footer2-bullet"}>
+                    <a href={"#about"}>Address</a><br></br>
+                    <a href={"#about"}>Phone<br></br></a>
+                    <a href={"#about"}>Email</a>
+                </p>
             </section>
         </footer>
     )
