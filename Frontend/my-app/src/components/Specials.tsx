@@ -3,6 +3,10 @@ import salad from "../images/action-background.jpg";
 import bruschetta from "../images/bruschetta.jpg";
 import pasta from "../images/pasta.jpg";
 
+/*
+Suck at separating these sections properly. Not a great CSS dev :(
+ */
+
 const Specials = () => {
     return (
         <>

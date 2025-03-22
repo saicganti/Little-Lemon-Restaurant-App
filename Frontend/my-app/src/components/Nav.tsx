@@ -1,5 +1,9 @@
 import React from "react";
 
+/*
+Used href here too, once again no multiple webpages means no need for separate JavaScript
+ */
+
 const Nav = () => {
     return (
         <nav className="navbar">

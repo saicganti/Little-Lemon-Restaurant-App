@@ -1,6 +1,10 @@
 import React from "react";
 import footerLogo from "../images/little-lemon-footer.png"
 
+/*
+Used href attribute rather than JS, since it is only a single-page application.
+ */
+
 const Footer = () => {
     return (
         <footer className="footer">

@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import bookingCycle from "../images/booking-cycle.jpg";
 
+
+//Shows what props will be used by the form
 interface BookingFormProps {
     availableTimes: string[];
     dispatch: React.Dispatch<any>;
@@ -9,12 +11,14 @@ interface BookingFormProps {
 
 const BookingForm: React.FC<BookingFormProps> = ({availableTimes = [], dispatch, submitForm}) => {
 
+    // state variables to keep track of state for all fields
     const [reserveDate, setReserveDate] = useState('');
     const [reserveTime, setReserveTime] = useState('');
     const [guestNum, setGuestNum] = useState('');
     const [occasion, setOccasion] = useState('');
     const [isFormValid, setIsFormValid] = useState(false);
 
+    // Checks validity of form
     useEffect(() => {
         const checkFormValidity = () => {
             return reserveDate && reserveTime && guestNum && occasion;
@@ -23,11 +27,13 @@ const BookingForm: React.FC<BookingFormProps> = ({availableTimes = [], dispatch,
         setIsFormValid(checkFormValidity());
     }, [reserveDate, reserveTime, guestNum, occasion]);
 
+    // Handles changing the date and displaying the appropriate times
     const handleDateChange = (e: { target: { value: any; }; }) => {
         setReserveDate(e.target.value);
         dispatch({type: 'UPDATE_TIMES', payload: e.target.value});
     };
 
+    // Handles the submitting action of form
     const handleSubmit = (e: {preventDefault: () => void;}) => {
         e.preventDefault();
         if (isFormValid) {
@@ -37,6 +43,7 @@ const BookingForm: React.FC<BookingFormProps> = ({availableTimes = [], dispatch,
         }
     };
 
+    // The form itself
     return (
         <section className={"booking-section"} id={"booking-section"}>
             <img src={bookingCycle} alt={"booking cycle"} id={"bookingCycle"}/>
